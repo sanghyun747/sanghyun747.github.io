@@ -9,7 +9,7 @@
   --nav-bg: rgba(255, 255, 255, 0.95);
   --sidebar-bg: #f6f8fa;
   --radius: 6px;
-  --sans: "Aptos", "Segoe UI Variable", "Segoe UI", "Pretendard", "Noto Sans KR", sans-serif;
+  --sans: system-ui, -apple-system, BlinkMacSystemFont, "Aptos", "Segoe UI Variable", "Segoe UI", "Pretendard", "Noto Sans KR", sans-serif;
   --serif: "Georgia", "Palatino", serif;
 }
 
@@ -36,7 +36,7 @@ body {
   color: var(--text-main);
   font-family: var(--sans);
   line-height: 1.6;
-  font-size: 16px;
+  font-size: 15px;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -58,6 +58,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-main);
   margin-top: 0;
   font-weight: 600;
+  line-height: 1.25;
 }
 
 .skip-link {
@@ -106,7 +107,6 @@ h1, h2, h3, h4, h5, h6 {
 .identity-card h1 {
   font-size: 2.2rem;
   margin-bottom: 0.25rem;
-  line-height: 1.2;
 }
 .identity-card .eyebrow {
   display: none;
@@ -120,10 +120,10 @@ h1, h2, h3, h4, h5, h6 {
   overflow-wrap: anywhere;
 }
 .identity-card .affiliation {
-  font-size: 0.95rem;
   color: var(--text-muted);
   margin-bottom: 1.5rem;
   margin-top: 0;
+  font-weight: 500;
   overflow-wrap: anywhere;
 }
 .contact-stack {
@@ -131,7 +131,6 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 0.75rem 1.25rem;
-  font-size: 0.95rem;
   border-top: 1px solid var(--border-color);
   padding-top: 1.25rem;
 }
@@ -175,6 +174,7 @@ h1, h2, h3, h4, h5, h6 {
 .profile-copy {
   margin: 0 0 1rem 0;
   color: var(--text-muted);
+  font-weight: 500;
 }
 .profile-copy + .focus-grid {
   margin-top: 2rem;
@@ -203,8 +203,8 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5rem;
 }
 .focus-grid p {
-  font-size: 0.95rem;
   color: var(--text-muted);
+  font-weight: 500;
   margin: 0;
 }
 
@@ -217,13 +217,13 @@ h1, h2, h3, h4, h5, h6 {
 .news-list li {
   display: block;
   margin-bottom: 1rem;
-  font-size: 0.95rem;
 }
 .news-list time {
   display: block;
   margin-bottom: 0.25rem;
   color: var(--text-muted);
   font-family: monospace;
+  font-weight: 500;
 }
 .news-list p { margin: 0; }
 
@@ -247,10 +247,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 .work-item p {
   margin: 0 0 0.25rem 0;
-  font-size: 0.95rem;
 }
 .work-item .authors {
   color: var(--text-muted);
+  font-weight: 500;
 }
 .work-item.featured {
   background: var(--sidebar-bg);
@@ -307,6 +307,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.35rem;
   color: var(--text-muted);
   font-family: monospace;
+  font-weight: 500;
 }
 .publication-list h3 {
   font-size: 1.1rem;
@@ -314,8 +315,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 .publication-list p {
   margin: 0;
-  font-size: 0.95rem;
   color: var(--text-muted);
+  font-weight: 500;
 }
 
 /* Experience */
@@ -334,6 +335,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.95rem;
   color: var(--text-muted);
   font-family: monospace;
+  font-weight: 500;
 }
 .timeline h3 {
   font-size: 1.05rem;
@@ -341,8 +343,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 .timeline p {
   margin: 0;
-  font-size: 0.95rem;
   color: var(--text-muted);
+  font-weight: 500;
 }
 
 /* Contact */
@@ -358,13 +360,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.85rem;
   max-width: 640px;
   font-size: 1.35rem;
-  line-height: 1.45;
 }
 .contact-panel p {
   max-width: 640px;
   margin: 0;
   color: var(--text-muted);
-  font-size: 0.98rem;
+  font-weight: 500;
 }
 
 .site-footer {
@@ -434,10 +435,6 @@ h1, h2, h3, h4, h5, h6 {
   }
   .contact-panel h2 {
     font-size: 1.2rem;
-    line-height: 1.5;
-  }
-  .contact-panel p {
-    font-size: 0.95rem;
   }
   .work-item, .work-item.featured, .publication-list li, .timeline article {
     display: flex;
