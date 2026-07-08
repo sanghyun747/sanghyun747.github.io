@@ -38,6 +38,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+p {
+  text-indent: 0;
+}
+
 a {
   color: var(--accent-color);
   text-decoration: none;
@@ -80,7 +84,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .portrait-card img {
   width: 100%;
-  max-width: 260px;
+  max-width: 247px;
   aspect-ratio: 4/5;
   object-fit: cover;
   object-position: center 18%;
@@ -210,13 +214,13 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 .news-list li {
-  display: flex;
-  gap: 1.5rem;
+  display: block;
   margin-bottom: 1rem;
   font-size: 0.95rem;
 }
 .news-list time {
-  min-width: 80px;
+  display: block;
+  margin-bottom: 0.25rem;
   color: var(--text-muted);
   font-family: monospace;
 }
@@ -224,17 +228,17 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Tech Reports */
 .work-item {
-  display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 1.5rem;
+  display: block;
   margin-bottom: 1.5rem;
 }
 .work-meta {
   color: var(--text-muted);
   font-size: 0.9rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  gap: 0.75rem;
   font-family: monospace;
+  margin-bottom: 0.4rem;
 }
 .work-item h3 {
   font-size: 1.1rem;
@@ -252,9 +256,8 @@ h1, h2, h3, h4, h5, h6 {
   padding: 1.25rem;
   border-radius: var(--radius);
   border: 1px solid var(--border-color);
-  margin-left: -1.25rem;
-  margin-right: -1.25rem;
-  grid-template-columns: 80px 1fr;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 /* Publications */
@@ -294,13 +297,13 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 .publication-list li {
-  display: flex;
-  gap: 1.5rem;
+  display: block;
   margin-bottom: 1.5rem;
 }
 .publication-list li.is-hidden { display: none; }
 .pub-year {
-  min-width: 80px;
+  display: block;
+  margin-bottom: 0.35rem;
   color: var(--text-muted);
   font-family: monospace;
 }
@@ -321,12 +324,12 @@ h1, h2, h3, h4, h5, h6 {
   gap: 1.5rem;
 }
 .timeline article {
-  display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: 1.5rem;
+  display: block;
 }
 .timeline time,
 .timeline-period {
+  display: block;
+  margin-bottom: 0.35rem;
   font-size: 0.95rem;
   color: var(--text-muted);
   font-family: monospace;
@@ -374,7 +377,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
   }
   .portrait-card img {
-    max-width: 160px;
+    max-width: 152px;
     margin-bottom: 0;
   }
   .contact-stack {
@@ -390,14 +393,6 @@ h1, h2, h3, h4, h5, h6 {
   }
   .focus-grid {
     grid-template-columns: 1fr;
-  }
-  .work-item, .work-item.featured, .publication-list li {
-    grid-template-columns: 60px 1fr;
-    gap: 1rem;
-  }
-  .timeline article {
-    grid-template-columns: 100px 1fr;
-    gap: 1rem;
   }
 }
 
