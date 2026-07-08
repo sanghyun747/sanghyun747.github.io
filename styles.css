@@ -361,11 +361,24 @@ h1, h2, h3, h4, h5, h6 {
 /* Contact */
 .contact-panel {
   background: var(--sidebar-bg);
-  padding: 2rem;
+  padding: 1.75rem 2rem;
   border-radius: var(--radius);
   border: 1px solid var(--border-color);
 }
-.contact-panel h2 { border: none; margin-bottom: 1rem; }
+.contact-panel h2 {
+  border: none;
+  padding-bottom: 0;
+  margin-bottom: 0.85rem;
+  max-width: 640px;
+  font-size: 1.35rem;
+  line-height: 1.45;
+}
+.contact-panel p {
+  max-width: 640px;
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.98rem;
+}
 
 .site-footer {
   text-align: center;
@@ -431,6 +444,16 @@ h1, h2, h3, h4, h5, h6 {
   }
   .contact-stack a {
     justify-content: center;
+  }
+  .contact-panel {
+    padding: 1.5rem;
+  }
+  .contact-panel h2 {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+  .contact-panel p {
+    font-size: 0.95rem;
   }
   .work-item, .work-item.featured, .publication-list li, .timeline article {
     display: flex;
