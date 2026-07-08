@@ -13,16 +13,18 @@
   --serif: "Georgia", "Palatino", serif;
 }
 
-:root[data-theme="dark"] {
-  color-scheme: dark;
-  --bg-color: #0d1117;
-  --text-main: #c9d1d9;
-  --text-muted: #8b949e;
-  --border-color: #30363d;
-  --accent-color: #58a6ff;
-  --accent-hover: #79c0ff;
-  --nav-bg: rgba(13, 17, 23, 0.95);
-  --sidebar-bg: #161b22;
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg-color: #0d1117;
+    --text-main: #c9d1d9;
+    --text-muted: #8b949e;
+    --border-color: #30363d;
+    --accent-color: #58a6ff;
+    --accent-hover: #79c0ff;
+    --nav-bg: rgba(13, 17, 23, 0.95);
+    --sidebar-bg: #161b22;
+  }
 }
 
 * { box-sizing: border-box; }
@@ -78,9 +80,9 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   top: auto;
   display: grid;
-  grid-template-columns: minmax(180px, 247px) minmax(0, 1fr);
+  grid-template-columns: minmax(170px, 235px) minmax(0, 1fr);
   gap: 2.5rem;
-  align-items: center;
+  align-items: start;
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 3rem;
 }
@@ -90,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
 .portrait-card img {
   display: block;
   width: 100%;
-  max-width: 247px;
+  max-width: 235px;
   aspect-ratio: 4/5;
   object-fit: cover;
   object-position: center 18%;
@@ -147,21 +149,6 @@ h1, h2, h3, h4, h5, h6 {
 .contact-stack a:hover {
   color: var(--accent-color);
 }
-.copy-button {
-  margin-top: 1.25rem;
-  width: 100%;
-  padding: 0.5rem;
-  background-color: var(--sidebar-bg);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius);
-  color: var(--text-main);
-  cursor: pointer;
-  font-size: 0.9rem;
-}
-.copy-button:hover {
-  background-color: var(--border-color);
-}
-
 /* Main Content */
 .content-column {
   display: flex;
@@ -396,12 +383,12 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 3rem;
   }
   .profile-rail {
-    grid-template-columns: 152px 1fr;
+    grid-template-columns: 144px 1fr;
     gap: 1.75rem;
     padding-bottom: 2.25rem;
   }
   .portrait-card img {
-    max-width: 152px;
+    max-width: 144px;
   }
   .identity-card h1 {
     font-size: 2rem;
@@ -413,9 +400,6 @@ h1, h2, h3, h4, h5, h6 {
   }
   .contact-stack a::after {
     display: none;
-  }
-  .copy-button {
-    width: auto;
   }
   .focus-grid {
     grid-template-columns: 1fr;
@@ -472,7 +456,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Print Styles */
 @media print {
-  .copy-button, .filter-row, .site-footer a {
+  .filter-row, .site-footer a {
     display: none !important;
   }
   body {
