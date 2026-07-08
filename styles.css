@@ -102,12 +102,14 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.25rem;
   font-weight: 500;
   margin-top: 0;
+  overflow-wrap: anywhere;
 }
 .identity-card .affiliation {
   font-size: 0.95rem;
   color: var(--text-muted);
   margin-bottom: 1.5rem;
   margin-top: 0;
+  overflow-wrap: anywhere;
 }
 .contact-stack {
   display: flex;
@@ -162,8 +164,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .lead {
   font-size: 1.1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: var(--text-main);
+}
+.profile-copy {
+  margin: 0 0 1rem 0;
+  color: var(--text-muted);
+}
+.profile-copy + .focus-grid {
+  margin-top: 2rem;
 }
 
 /* Focus Grid */
@@ -316,7 +325,8 @@ h1, h2, h3, h4, h5, h6 {
   grid-template-columns: 140px 1fr;
   gap: 1.5rem;
 }
-.timeline time {
+.timeline time,
+.timeline-period {
   font-size: 0.95rem;
   color: var(--text-muted);
   font-family: monospace;
