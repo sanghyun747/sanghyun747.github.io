@@ -80,10 +80,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 .portrait-card img {
   width: 100%;
-  max-width: 220px;
-  aspect-ratio: 1/1;
+  max-width: 260px;
+  aspect-ratio: 4/5;
   object-fit: cover;
-  border-radius: 50%;
+  object-position: center 18%;
+  border-radius: 18px;
   border: 1px solid var(--border-color);
   margin-bottom: 1.5rem;
 }
@@ -363,7 +364,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
   }
   .portrait-card img {
-    max-width: 140px;
+    max-width: 160px;
     margin-bottom: 0;
   }
   .contact-stack {
@@ -441,7 +442,7 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: 1rem;
   }
   .portrait-card img {
-    max-width: 120px;
+    max-width: 140px;
     float: left;
     margin-right: 1.5rem;
   }
