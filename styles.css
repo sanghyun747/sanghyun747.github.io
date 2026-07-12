@@ -67,7 +67,44 @@ h1, h2, h3, h4, h5, h6 {
 .skip-link:focus { left: 50%; transform: translateX(-50%); }
 
 .section-dots {
-  display: none;
+  position: fixed;
+  top: 50%;
+  right: 0.5rem;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.35rem 0.2rem;
+  transform: translateY(-50%);
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  background: var(--nav-bg);
+  box-shadow: 0 4px 18px rgba(31, 35, 40, 0.14);
+}
+.section-dots a {
+  display: grid;
+  width: 1.75rem;
+  height: 1.75rem;
+  place-items: center;
+  border-radius: 50%;
+}
+.section-dots a::before {
+  content: "";
+  width: 0.44rem;
+  height: 0.44rem;
+  border-radius: 50%;
+  background: var(--accent-color);
+  opacity: 0.92;
+  transition: transform 150ms ease, opacity 150ms ease;
+}
+.section-dots a:hover::before,
+.section-dots a:focus-visible::before {
+  opacity: 1;
+  transform: scale(1.45);
+}
+.section-dots a:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: -2px;
 }
 
 /* Layout */
@@ -412,47 +449,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 600px) {
-  .section-dots {
-    position: fixed;
-    top: 50%;
-    right: 0.35rem;
-    z-index: 50;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0.35rem 0.2rem;
-    transform: translateY(-50%);
-    border: 1px solid var(--border-color);
-    border-radius: 999px;
-    background: var(--nav-bg);
-    box-shadow: 0 4px 16px rgba(31, 35, 40, 0.08);
-  }
-  .section-dots a {
-    display: grid;
-    width: 1.75rem;
-    height: 1.75rem;
-    place-items: center;
-    border-radius: 50%;
-  }
-  .section-dots a::before {
-    content: "";
-    width: 0.36rem;
-    height: 0.36rem;
-    border-radius: 50%;
-    background: var(--text-muted);
-    opacity: 0.75;
-    transition: transform 150ms ease, background-color 150ms ease, opacity 150ms ease;
-  }
-  .section-dots a:hover::before,
-  .section-dots a:focus-visible::before {
-    background: var(--accent-color);
-    opacity: 1;
-    transform: scale(1.45);
-  }
-  .section-dots a:focus-visible {
-    outline: 2px solid var(--accent-color);
-    outline-offset: -2px;
-  }
   .page-shell {
     margin-top: 2rem;
     padding: 0 1.5rem;
