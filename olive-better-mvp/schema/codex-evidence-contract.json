@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Codex Evidence Judgement Contract",
+  "type": "object",
+  "required": ["overall", "summary", "counts", "cards"],
+  "properties": {
+    "overall": {"type":"string","enum":["ready","needs-review","blocked"]},
+    "summary": {"type":"string"},
+    "counts": {"type":"object","required":["pass","warn","blocked"]},
+    "cards": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id","title","status","summary","evidence","nextAction"],
+        "properties": {
+          "id": {"type":"string"},
+          "title": {"type":"string"},
+          "status": {"type":"string","enum":["pass","warn","blocked"]},
+          "summary": {"type":"string"},
+          "evidence": {"type":"array","items":{"type":"string"}},
+          "nextAction": {"type":"string"}
+        }
+      }
+    }
+  }
+}

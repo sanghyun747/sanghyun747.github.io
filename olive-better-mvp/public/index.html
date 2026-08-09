@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Olive Better MD Studio</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand-lockup" href="/" aria-label="Olive Better 운영자 홈">
+        <span class="brand-mark">OB</span>
+        <span><b>OLIVE BETTER</b><small>MD AUTOMATION</small></span>
+      </a>
+      <div class="top-actions">
+        <span id="serverBadge" class="status-pill neutral">서버 확인 중</span>
+        <a class="button ghost" href="/customer.html" target="_blank" rel="noreferrer">고객 화면 열기</a>
+      </div>
+    </header>
+
+    <main class="operator-shell">
+      <aside class="request-panel">
+        <div class="step-label">STEP 1 · 기획 요청</div>
+        <h1>어떤 웰니스 기획전을 만들까요?</h1>
+        <p class="lead">요청을 입력하면 공개 근거, 안전 상품, 배너 문구와 화면 구성을 한 번에 준비합니다.</p>
+        <form id="requestForm">
+          <label for="mdRequest">MD 요청</label>
+          <textarea id="mdRequest" rows="7">여름철 바쁜 직장인을 위한 수면, 영양, 이너뷰티 웰니스 기획전을 만들어줘</textarea>
+          <details class="demo-options">
+            <summary>실패·fallback 확인 옵션</summary>
+            <label class="check"><input id="forceTrendFailure" type="checkbox"> 공개 검색 실패를 강제해 이전 성공 결과 확인</label>
+            <label class="check"><input id="forceLlmFailure" type="checkbox"> LLM 실패를 강제해 발행 차단 확인</label>
+          </details>
+          <button class="button primary wide" type="submit">근거 조사하고 초안 만들기</button>
+          <button class="button secondary wide" id="rerun" type="button">고객 반응 반영해 다시 만들기</button>
+          <button class="text-button" id="reset" type="button">모든 데모 상태 초기화</button>
+        </form>
+        <div id="catalogSummary" class="catalog-summary"></div>
+      </aside>
+
+      <section class="review-area" aria-live="polite">
+        <div id="progressBanner" class="progress-banner neutral">
+          <div><span class="step-label">STEP 2–4 · 자동 조사, 검토, 발행</span><strong>요청을 입력하면 판단 근거가 이곳에 표시됩니다.</strong></div>
+        </div>
+        <div id="draftRoot" class="stack">
+          <section class="empty-state"><span>01</span><h2>먼저 기획 요청을 보내주세요</h2><p>자동화가 무엇을 채택하고 제외했는지 카드마다 쉬운 말로 설명합니다.</p></section>
+        </div>
+      </section>
+    </main>
+    <template id="productTemplate">
+      <article class="product-card">
+        <div class="product-image"><span></span></div>
+        <div class="product-body"><div class="product-brand"></div><h3></h3><p class="functional"></p><p class="product-meta"></p><div class="card-actions"></div></div>
+      </article>
+    </template>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

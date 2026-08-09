@@ -1,0 +1,19 @@
+{
+  "name": "olive-better-md-automation",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node src/server.js",
+    "reset": "node src/scripts/reset.js",
+    "judge": "node src/scripts/codex-judge.js",
+    "api:e2e": "node src/scripts/api-e2e.js",
+    "browser:smoke": "node src/scripts/browser-smoke.js",
+    "data:generate": "node src/scripts/generate-products.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

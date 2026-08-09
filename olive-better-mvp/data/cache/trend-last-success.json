@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "trend-cache-v1",
+  "status": "live",
+  "source": "검증용 공개 신호 캐시",
+  "sourceUrl": "",
+  "topic": "웰니스 건강 관리",
+  "fetchedAt": "2026-07-30T00:00:00.000Z",
+  "rawSignals": [
+    {"id":"cache-1","title":"수면과 영양 균형을 챙기는 생활 루틴 관심","source":"공개 신호 캐시","url":"","publishedAt":"2026-07-28T00:00:00.000Z"},
+    {"id":"cache-2","title":"비타민과 장 건강을 함께 살피는 웰니스 흐름","source":"공개 신호 캐시","url":"","publishedAt":"2026-07-27T00:00:00.000Z"}
+  ]
+}
