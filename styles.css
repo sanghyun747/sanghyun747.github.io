@@ -302,6 +302,48 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: 0;
 }
 
+/* Competitions */
+.competition-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.competition-list li {
+  display: block;
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+}
+.competition-list li:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: none;
+}
+.competition-meta {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-family: monospace;
+  font-weight: 500;
+}
+.competition-list h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.35rem;
+}
+.competition-list .participants {
+  margin: 0 0 0.5rem 0;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+.competition-list .award {
+  margin: 0;
+  padding-left: 0.75rem;
+  border-left: 3px solid var(--accent-color);
+  color: var(--text-main);
+  font-weight: 500;
+}
+
 /* Publications */
 .compact-heading {
   display: flex;
