@@ -447,14 +447,10 @@ h1, h2, h3, h4, h5, h6 {
   .focus-grid {
     grid-template-columns: 1fr;
   }
-  /* Move the dot navigation off the right edge so it cannot overlap body text. */
+  /* The fixed pill overlays body text on narrow screens, and the page is short
+     enough to scroll without it. */
   .section-dots {
-    top: auto;
-    right: 50%;
-    bottom: 1rem;
-    flex-direction: row;
-    padding: 0.2rem 0.35rem;
-    transform: translateX(50%);
+    display: none;
   }
 }
 
