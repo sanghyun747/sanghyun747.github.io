@@ -6,7 +6,7 @@ Editable personal profile homepage based on the structure of `https://kangwookle
 
 - `index.html`: profile content and section order.
 - `styles.css`: visual system, layout, responsive rules, light/dark colors.
-- `script.js`: theme toggle, email copy, publication filter, active navigation.
+- `script.js`: footer year stamp.
 - `assets/profile-placeholder.svg`: temporary portrait placeholder. Replace this file with your own photo, or update the `<img>` path in `index.html`.
 
 ## Edit Points

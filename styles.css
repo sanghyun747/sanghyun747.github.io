@@ -249,26 +249,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-/* Lists (News) */
-.news-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.news-list li {
-  display: block;
-  margin-bottom: 1rem;
-}
-.news-list time {
-  display: block;
-  margin-bottom: 0.25rem;
-  color: var(--text-muted);
-  font-family: monospace;
-  font-weight: 500;
-}
-.news-list p { margin: 0; }
-
-/* Tech Reports */
+/* Projects */
 .work-item {
   display: block;
   margin-bottom: 1.5rem;
@@ -289,9 +270,23 @@ h1, h2, h3, h4, h5, h6 {
 .work-item p {
   margin: 0 0 0.25rem 0;
 }
-.work-item .authors {
+.work-item .credit {
   color: var(--text-muted);
   font-weight: 500;
+  margin-top: 0.5rem;
+}
+.work-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 1rem;
+  margin: 0.4rem 0 0 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+.work-links .link-note {
+  font-style: italic;
 }
 .work-item.featured {
   background: var(--sidebar-bg);
@@ -331,75 +326,39 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.1rem;
   margin-bottom: 0.35rem;
 }
-.competition-list .participants {
-  margin: 0 0 0.5rem 0;
-  color: var(--text-muted);
-  font-weight: 500;
-}
 .competition-list .award {
-  margin: 0;
+  margin: 0 0 0.4rem 0;
   padding-left: 0.75rem;
   border-left: 3px solid var(--accent-color);
   color: var(--text-main);
   font-weight: 500;
 }
-
-/* Publications */
-.compact-heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  border-bottom: 2px solid var(--border-color);
-  margin-bottom: 1.5rem;
-}
-.compact-heading h2 {
-  border-bottom: none;
-  margin-bottom: 0;
-  padding-bottom: 0.5rem;
-}
-.filter-row {
-  display: flex;
-  gap: 0.5rem;
-}
-.filter-row button {
-  background: none;
-  border: 1px solid transparent;
+.competition-list .participants {
+  margin: 0;
   color: var(--text-muted);
+  font-weight: 500;
+}
+.more-competitions {
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1rem;
+}
+.more-competitions summary {
   cursor: pointer;
-  padding: 0.2rem 0.5rem;
-  border-radius: var(--radius);
-  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 500;
 }
-.filter-row button.is-active, .filter-row button:hover {
-  background: var(--sidebar-bg);
-  border-color: var(--border-color);
-  color: var(--text-main);
+.more-competitions summary:hover {
+  color: var(--accent-color);
 }
-.publication-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.more-competitions ul {
+  margin: 0.75rem 0 0 0;
+  padding-left: 1.1rem;
+  color: var(--text-muted);
+  font-weight: 500;
 }
-.publication-list li {
-  display: block;
-  margin-bottom: 1.5rem;
-}
-.publication-list li.is-hidden { display: none; }
-.pub-year {
-  display: block;
+.more-competitions li {
   margin-bottom: 0.35rem;
-  color: var(--text-muted);
-  font-family: monospace;
-  font-weight: 500;
-}
-.publication-list h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.25rem;
-}
-.publication-list p {
-  margin: 0;
-  color: var(--text-muted);
-  font-weight: 500;
 }
 
 /* Experience */
@@ -488,6 +447,15 @@ h1, h2, h3, h4, h5, h6 {
   .focus-grid {
     grid-template-columns: 1fr;
   }
+  /* Move the dot navigation off the right edge so it cannot overlap body text. */
+  .section-dots {
+    top: auto;
+    right: 50%;
+    bottom: 1rem;
+    flex-direction: row;
+    padding: 0.2rem 0.35rem;
+    transform: translateX(50%);
+  }
 }
 
 @media (max-width: 600px) {
@@ -519,12 +487,8 @@ h1, h2, h3, h4, h5, h6 {
   .contact-panel h2 {
     font-size: 1.2rem;
   }
-  .work-item, .work-item.featured, .publication-list li, .timeline article {
+  .work-item, .work-item.featured, .competition-list li, .timeline article {
     display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-  }
-  .news-list li {
     flex-direction: column;
     gap: 0.25rem;
   }
@@ -536,8 +500,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Print Styles */
 @media print {
-  .section-dots, .filter-row, .site-footer a {
+  .section-dots, .site-footer a {
     display: none !important;
+  }
+  .more-competitions {
+    page-break-inside: avoid;
   }
   body {
     background: white;
