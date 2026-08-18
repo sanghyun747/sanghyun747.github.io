@@ -455,7 +455,6 @@ h1, h2, h3, h4, h5, h6 {
 @media print {
   html { font-size: 12px; }
   body { font-size: 11px; line-height: 1.45; }
-  .cv-link { display: none !important; }
   .work-item, .timeline article, .competition-list li, .focus-grid article { page-break-inside: avoid; }
   .site-footer a {
     display: none !important;
